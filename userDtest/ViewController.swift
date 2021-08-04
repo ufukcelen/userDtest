@@ -29,10 +29,7 @@ class ViewController: UIViewController {
         if let newBirthDay = storedbirthDay as? String{
             birthDayLabel.text = newBirthDay
         }
-        
-        
-        
-        
+    
     }
 
   
@@ -53,7 +50,22 @@ class ViewController: UIViewController {
     
     @IBAction func deleteClicked(_ sender: Any) {
         
+        let storedName = UserDefaults.standard.object(forKey: "nameKey")
+        let storedbirthDay = UserDefaults.standard.object(forKey: "birthDayKey")
         
+        if (storedName as? String) != nil {
+            UserDefaults.standard.removeObject(forKey: "nameKey")
+            nameLabel.text = ""
+            
+        }
+        
+        if (storedbirthDay as? String) != nil {
+            
+            UserDefaults.standard.removeObject(forKey: "birthDayKey")
+            birthDayLabel.text = ""
+            
+            
+        }
         
         
     }
