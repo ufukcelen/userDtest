@@ -19,7 +19,16 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       
+        let storedName = UserDefaults.standard.object(forKey: "nameKey")
+        let storedbirthDay = UserDefaults.standard.object(forKey: "birthDayKey")
+        
+        if let newName = storedName as? String{
+            nameLabel.text = newName
+        }
+        
+        if let newBirthDay = storedbirthDay as? String{
+            birthDayLabel.text = newBirthDay
+        }
         
         
         
