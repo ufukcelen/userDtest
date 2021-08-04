@@ -19,8 +19,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
+       
         
         
         
@@ -35,9 +34,11 @@ class ViewController: UIViewController {
     
     @IBAction func saveClicked(_ sender: Any) {
         
+        let storedName = UserDefaults.standard.setValue(nameTextField.text, forKey: "nameKey")
+        let storedBirthDay = UserDefaults.setValue(birthDayTextField.text, forKey: "birthDayKey")
         
-        
-        
+        nameLabel.text = nameTextField.text!
+        birthDayLabel.text = birthDayTextField.text!
     }
     
     
