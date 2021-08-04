@@ -19,8 +19,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let storedName = UserDefaults.standard.object(forKey: "nameKey")
-        let storedbirthDay = UserDefaults.standard.object(forKey: "birthDayKey")
+        let storedName = UserDefaults.standard.object(forKey: "nKey")
+        let storedbirthDay = UserDefaults.standard.object(forKey: "bKey")
         
         if let newName = storedName as? String{
             nameLabel.text = newName
@@ -40,8 +40,8 @@ class ViewController: UIViewController {
     
     @IBAction func saveClicked(_ sender: Any) {
         
-        let storedName = UserDefaults.standard.set(nameTextField.text, forKey: "nameKey")
-        let storedBirthDay = UserDefaults.standard.set(nameTextField.text, forKey: "birthDayKey")
+        let storedName = UserDefaults.standard.set(nameTextField.text, forKey: "nKey")
+        let storedBirthDay = UserDefaults.standard.set(nameTextField.text, forKey: "bKey")
         
         nameLabel.text = nameTextField.text
         birthDayLabel.text = birthDayTextField.text
@@ -50,18 +50,18 @@ class ViewController: UIViewController {
     
     @IBAction func deleteClicked(_ sender: Any) {
         
-        let storedName = UserDefaults.standard.object(forKey: "nameKey")
-        let storedbirthDay = UserDefaults.standard.object(forKey: "birthDayKey")
+        let storedName = UserDefaults.standard.object(forKey: "nKey")
+        let storedbirthDay = UserDefaults.standard.object(forKey: "bKey")
         
         if (storedName as? String) != nil {
-            UserDefaults.standard.removeObject(forKey: "nameKey")
+            UserDefaults.standard.removeObject(forKey: "nKey")
             nameLabel.text = ""
             
         }
         
         if (storedbirthDay as? String) != nil {
             
-            UserDefaults.standard.removeObject(forKey: "birthDayKey")
+            UserDefaults.standard.removeObject(forKey: "bKey")
             birthDayLabel.text = ""
             
             
