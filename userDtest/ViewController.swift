@@ -9,11 +9,51 @@ import UIKit
 
 class ViewController: UIViewController {
 
+  
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var birthDayTextField: UITextField!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var birthDayLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        
+        
+        
+        
+        
+        
     }
 
+  
+    
+    
+    
+    
+    
+    @IBAction func saveClicked(_ sender: Any) {
+        
+        
+        
+        
+    }
+    
+    
+    @IBAction func deleteClicked(_ sender: Any) {
+        
+        
+        
+        
+    }
+    
+    
+    
+    
+    
+    
+    
 
 }
 
